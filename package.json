@@ -1,5 +1,5 @@
 {
-  "name": "dayscore_native",
+  "name": "dayscore",
   "main": "expo-router/entry",
   "version": "1.0.0",
   "scripts": {

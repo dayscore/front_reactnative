@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "dayscore_native",
-    "slug": "dayscore_native",
+    "name": "dayscore",
+    "slug": "dayscore",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "dayscorenative",
+    "scheme": "dayscore",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {

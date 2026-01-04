@@ -1,6 +1,6 @@
 import { Image } from 'expo-image';
 import { Platform, StyleSheet } from 'react-native';
-import { LiquidGlassView, isLiquidGlassSupported } from '@callstack/liquid-glass';
+
 import { HelloWave } from '@/components/hello-wave';
 import ParallaxScrollView from '@/components/parallax-scroll-view';
 import { ThemedText } from '@/components/themed-text';
@@ -22,17 +22,7 @@ export default function HomeScreen() {
         <ThemedText type="title">DayScore</ThemedText>
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
-        <LiquidGlassView
-          style={[
-            { width: 200, height: 100, borderRadius: 20 },
-            !isLiquidGlassSupported && { backgroundColor: 'rgba(255,255,255,0.5)' }
-          ]}
-          interactive
-          effect="regular"
-        >
-          <ThemedText style={{ fontWeight: '600' }}>Hello World</ThemedText>
-        </LiquidGlassView>
-        
+        <ThemedText type="subtitle">Step 1: Try it</ThemedText>
         <ThemedText>
           Edit <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> to see changes.
           DO YOU STILL MISS ME WHEN IM OUTTA SIGHT OUTTA MIND

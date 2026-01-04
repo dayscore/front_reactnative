@@ -1,3 +1,4 @@
+import { Link } from "expo-router";
 import { Text, View } from "react-native";
 
 export default function Index() {
@@ -7,15 +8,25 @@ export default function Index() {
         flex: 1,
         justifyContent: "center",
         alignItems: "center",
+        backgroundColor: "black"
       }}
     >
       <Text
         style={{
           fontSize: 24,
           fontWeight: 'bold',
+          color: "white"
         }}
       >
-        DayScore App
+        DayScore
+      </Text>
+      <Text
+        style={{
+          fontSize: 18,
+          color: '#ccc',
+        }}
+      >
+        (antigo YearTracker)
       </Text>
       <Text
         style={{
@@ -23,8 +34,17 @@ export default function Index() {
           color: '#888',
         }}
       >
-        Welcome to your app!
+        Avalie seu dia
       </Text>
+      <Link href="/onboarding"
+        style={{
+          marginTop: 30,
+          fontSize: 18,
+          color: 'blue',
+        }}
+      >
+        Começar
+      </Link>
     </View>
   );
 }

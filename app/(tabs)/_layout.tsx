@@ -8,9 +8,9 @@ export default function _Layout() {
             <Label>Início</Label>
             <Icon sf="house.fill" drawable="custom_android_drawable" />
         </NativeTabs.Trigger>
-        <NativeTabs.Trigger name="onboarding">
-            <Icon sf="macwindow.and.pointer.arrow" drawable="custom_settings_drawable" />
-            <Label>Tela</Label>
+        <NativeTabs.Trigger name="calendar">
+            <Icon sf="calendar" drawable="custom_settings_drawable" />
+            <Label>Calendário</Label>
         </NativeTabs.Trigger>
     </NativeTabs>
   )

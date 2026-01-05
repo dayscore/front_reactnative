@@ -1,10 +1,10 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-export default function Onboarding() {
+export default function Calendar() {
   return (
     <View style={styles["container"]}>
-      <Text style={styles["text"]}>Tela</Text>
+      <Text style={styles["text"]}>WIP</Text>
     </View>
   )
 }

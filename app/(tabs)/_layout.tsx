@@ -12,6 +12,10 @@ export default function _Layout() {
             <Icon sf="calendar" drawable="custom_settings_drawable" />
             <Label>Calendário</Label>
         </NativeTabs.Trigger>
+        <NativeTabs.Trigger name="settings">
+            <Icon sf="gearshape.fill" drawable="custom_profile_drawable" />
+            <Label>Configurações</Label>
+        </NativeTabs.Trigger>
     </NativeTabs>
   )
 }

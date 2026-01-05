@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import Slider from "@react-native-community/slider";
 import { Button } from "@react-navigation/elements";
 import React, { useState } from "react";
-import { Alert, Appearance, Pressable, StyleSheet, Text, TextInput, View, Vibration } from "react-native";
+import { Alert, Appearance, Pressable, StyleSheet, Text, TextInput, View } from "react-native";
 
 const colorScheme = Appearance.getColorScheme();
 
@@ -23,25 +23,25 @@ export default function Index() {
 
       <View style={{ flexDirection: "row", justifyContent: "space-between", width: 300, marginTop: 40 }}>
         <Pressable onPress={() => setSliderValue(0)}>
-          <FontAwesomeIcon icon={sliderValue >= 0 ? faStarSolid : faStarRegular} color="white" size={24} />
+          <FontAwesomeIcon icon={sliderValue >= 0 ? faStarSolid : faStarRegular} color={colorScheme === "dark" ? "white" : "black"} size={24} />
         </Pressable>
         <Pressable onPress={() => setSliderValue(1)}>
-          <FontAwesomeIcon icon={sliderValue >= 1 ? faStarSolid : faStarRegular} color="white" size={24} />
+          <FontAwesomeIcon icon={sliderValue >= 1 ? faStarSolid : faStarRegular} color={colorScheme === "dark" ? "white" : "black"} size={24} />
         </Pressable>
         <Pressable onPress={() => setSliderValue(2)}>
-          <FontAwesomeIcon icon={sliderValue >= 2 ? faStarSolid : faStarRegular} color="white" size={24} />
+          <FontAwesomeIcon icon={sliderValue >= 2 ? faStarSolid : faStarRegular} color={colorScheme === "dark" ? "white" : "black"} size={24} />
         </Pressable>
         <Pressable onPress={() => setSliderValue(3)}>
-          <FontAwesomeIcon icon={sliderValue >= 3 ? faStarSolid : faStarRegular} color="white" size={24} />
+          <FontAwesomeIcon icon={sliderValue >= 3 ? faStarSolid : faStarRegular} color={colorScheme === "dark" ? "white" : "black"} size={24} />
         </Pressable>
         <Pressable onPress={() => setSliderValue(4)}>
-          <FontAwesomeIcon icon={sliderValue >= 4 ? faStarSolid : faStarRegular} color="white" size={24} />
+          <FontAwesomeIcon icon={sliderValue >= 4 ? faStarSolid : faStarRegular} color={colorScheme === "dark" ? "white" : "black"} size={24} />
         </Pressable>
         <Pressable onPress={() => setSliderValue(5)}>
-          <FontAwesomeIcon icon={sliderValue >= 5 ? faStarSolid : faStarRegular} color="white" size={24} />
+          <FontAwesomeIcon icon={sliderValue >= 5 ? faStarSolid : faStarRegular} color={colorScheme === "dark" ? "white" : "black"} size={24} />
         </Pressable>
         <Pressable onPress={() => setSliderValue(6)}>
-          <FontAwesomeIcon icon={sliderValue >= 6 ? faStarSolid : faStarRegular} color="white" size={24} />
+          <FontAwesomeIcon icon={sliderValue >= 6 ? faStarSolid : faStarRegular} color={colorScheme === "dark" ? "white" : "black"} size={24} />
         </Pressable>
       </View>
       <Slider

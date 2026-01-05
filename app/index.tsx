@@ -1,50 +1,42 @@
 import { Link } from "expo-router";
-import { Text, View } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 
 export default function Index() {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-        backgroundColor: "black"
-      }}
-    >
-      <Text
-        style={{
-          fontSize: 24,
-          fontWeight: 'bold',
-          color: "white"
-        }}
-      >
+    <View style={styles["container"]}>
+      <Text style={styles["title"]}>
         DayScore
       </Text>
-      <Text
-        style={{
-          fontSize: 18,
-          color: '#ccc',
-        }}
-      >
-        (antigo YearTracker)
-      </Text>
-      <Text
-        style={{
-          marginTop: 20, fontSize: 16,
-          color: '#888',
-        }}
-      >
+      <Text style={styles["subtitle"]}>
         Avalie seu dia
       </Text>
-      <Link href="/onboarding"
-        style={{
-          marginTop: 30,
-          fontSize: 18,
-          color: 'blue',
-        }}
-      >
+      <Link href="/onboarding" style={styles["link"]}>
         Começar
       </Link>
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "black"
+  },
+  title: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: 'white'
+  },
+  subtitle: {
+    fontSize: 18,
+    color: '#787878'
+  },
+  link: {
+    marginTop: 20,
+    fontSize: 18,
+    color: '#0373fc',
+    textDecorationLine: 'underline'
+  }
+})

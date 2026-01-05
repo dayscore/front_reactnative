@@ -10,14 +10,14 @@ export default function Onboarding() {
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: 'black',
-        color: "white"
-    },
-    text: {
-        color: 'white'
-    }
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'black',
+    color: "white"
+  },
+  text: {
+    color: 'white'
+  }
 })

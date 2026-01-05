@@ -1,7 +1,9 @@
-import { StyleSheet, Text, View, Alert } from "react-native";
+import { StyleSheet, Text, View, Alert, Appearance } from "react-native";
 import Slider from "@react-native-community/slider";
 import React from "react";
 import { Button } from "@react-navigation/elements";
+
+const colorScheme = Appearance.getColorScheme();
 
 export default function Index() {
   const [sliderValue, setSliderValue] = React.useState(3);
@@ -20,7 +22,7 @@ export default function Index() {
         minimumValue={0}
         maximumValue={6}
         minimumTrackTintColor="#0373fc"
-        maximumTrackTintColor="#000000"
+        maximumTrackTintColor="#7a7a7a7a"
         step={1}
         value={sliderValue}
         onValueChange={(value) => setSliderValue(value)}
@@ -48,12 +50,12 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "black"
+    backgroundColor: colorScheme === "dark" ? "black" : "white"
   },
   title: {
     fontSize: 24,
     fontWeight: 'bold',
-    color: 'white'
+    color: colorScheme === "dark" ? "white" : "black"
   },
   subtitle: {
     fontSize: 18,

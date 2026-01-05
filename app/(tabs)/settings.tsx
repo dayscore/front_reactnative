@@ -1,5 +1,7 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View, Appearance } from 'react-native'
 import React from 'react'
+
+const colorScheme = Appearance.getColorScheme();
 
 export default function Settings() {
   return (
@@ -14,10 +16,10 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'black',
-    color: "white"
+    backgroundColor: colorScheme === "dark" ? "black" : "white",
+    color: colorScheme === "dark" ? "white" : "black"
   },
   text: {
-    color: 'white'
+    color: colorScheme === "dark" ? "white" : "black"
   }
 })

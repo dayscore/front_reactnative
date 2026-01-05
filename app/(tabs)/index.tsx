@@ -63,7 +63,7 @@ export default function Index() {
         multiline={false}
         value={note}
         onChangeText={(value) => setNote(value)}
-        style={{marginTop: 20, color: colorScheme === "dark" ? "white" : "black", borderColor: '#7a7a7a7a', borderWidth: 1, width: 300, padding: 10, borderRadius: 12}}
+        style={{marginTop: 20, color: "#7a7a7a7a", borderColor: '#7a7a7a7a', borderWidth: 1, width: 300, padding: 10, borderRadius: 12}}
       />
 
       <Button 

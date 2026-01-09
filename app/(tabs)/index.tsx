@@ -21,7 +21,7 @@ export default function Index() {
         Como foi seu dia?
       </Text>
 
-      <View style={{ flexDirection: "row", justifyContent: "space-between", width: 300, marginTop: 40 }}>
+      <View style={styles['stars']}>
         <Pressable onPress={() => setSliderValue(0)}>
           <FontAwesomeIcon icon={sliderValue >= 0 ? faStarSolid : faStarRegular} color={colorScheme === "dark" ? "white" : "black"} size={24} />
         </Pressable>
@@ -48,7 +48,7 @@ export default function Index() {
         style={{ width: 300, height: 40 }}
         minimumValue={0}
         maximumValue={6}
-        minimumTrackTintColor="#0373fc"
+        minimumTrackTintColor={["#5b0000ff", "#fc0303ff", "#ff6600ff", "#ffe065ff", "#44ff00ff", "#03fcb5ff", "#0373fc"][sliderValue]}
         maximumTrackTintColor="#7a7a7a7a"
         step={1}
         value={sliderValue}
@@ -63,7 +63,7 @@ export default function Index() {
         multiline={false}
         value={note}
         onChangeText={(value) => setNote(value)}
-        style={{marginTop: 20, color: "#7a7a7a7a", borderColor: '#7a7a7a7a', borderWidth: 1, width: 300, padding: 10, borderRadius: 12}}
+        style={styles['note']}
       />
 
       <Button 
@@ -100,5 +100,20 @@ const styles = StyleSheet.create({
     fontSize: 18,
     color: '#0373fc',
     textDecorationLine: 'underline'
+  }, 
+  note: {
+    marginTop: 20,
+    color: colorScheme === "dark" ? 'white' : 'black',
+    borderColor: '#7a7a7a7a',
+    borderWidth: 1,
+    width: 300,
+    padding: 10,
+    borderRadius: 12
+  },
+  stars: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    width: 300,
+    marginTop: 40
   }
 })
